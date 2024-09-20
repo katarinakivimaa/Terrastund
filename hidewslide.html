@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeoutfadein</title>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+        
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                    $("p").hide("slow", function(){
+                    alert("The paragraph is now hidden")
+                    });
+                });
+            });
+
+    </script>
+</head>
+<body>
+    <button>hide</button>
+    <p>Click on me and I'll be gone</p>
+</body>
+</html>

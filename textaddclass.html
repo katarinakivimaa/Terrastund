@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeoutfadein</title>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+        
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h1,h2,p").addClass("blue");
+                $("div").addClass("important");
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>Paragraph ahoyyyyyyyyyyyy</p>
+    <p>Paragraph ahoyyyyyyyyyyyy</p>
+
+    <div>important text!</div><br>
+
+    <button>Add classes to elements</button>
+</body>
+</html>

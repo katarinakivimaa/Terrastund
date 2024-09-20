@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>katakata</title>
+    <script language="JavaScript">
+        function DoAdd()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 + Value2);
+        }
+
+        function DoSub()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 - Value2);
+        }
+
+        function DoMul()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 * Value2);
+        }
+
+        function DoDiv()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 / Value2);
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1>fewsd</h1>
+
+    <p>
+        Value1:
+        <input type="text" id="Value1" value="4">
+    </p>
+
+    <p>
+        Value2:
+        <input type="text" id="Value2" value="5">
+    </p>
+
+    <p>
+        Result:
+        <input type="text" id="Result" value="" readonly="true">
+    </p>
+    <input type="button"
+            value="+"
+            onclick="DoAdd()"/>
+    <input type="button"
+            value="-"
+            onclick="DoSub()"/>  
+    <input type="button"
+            value="*"
+            onclick="DoMul()"/>  
+    <input type="button"
+            value="/"
+            onclick="DoDiv()"/>   
+
+</body>
+</html>

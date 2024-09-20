@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>katakata</title>
+    <script language="JavaScript">
+        function DoAdd()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 + Value2);
+        }
+
+        function DoSub()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 - Value2);
+        }
+
+        function DoMul()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 * Value2);
+                // $("div").addClass("important");
+        }
+
+        function DoDiv()
+        {
+            //obtain the current values of 1 and 2
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number (
+                document.getElementById("Value2").value);
+
+            document.getElementById("Result").setAttribute(
+                "value",Value1 / Value2);
+        }
+
+    function DoCheck() {
+        var confirmAnswer = ("12");
+        var confirmAnswer1 = ("3");
+        var confirmAnswer2 = ("4");
+        var confirmAnswer3 = ("8");
+        var answer = document.getElementById("answer").value;
+        if (answer == confirmAnswer, confirmAnswer1,confirmAnswer2,confirmAnswer3) {
+             alert("Nice! Correct!");
+        }
+        else{
+            alert("That's not right...");
+        }
+    }
+
+        // if (answer==Value1+Value2){
+        //     alert('Correct!')
+        // }
+        // else {
+        //     alert("Not correct!")
+        // }
+
+        // answer=prompt('what is'+a+'x'+b+'?');
+        
+
+
+        // function random() {
+        //     document.getElementsById("number").innerHTML = Math.floor(Math.random()*10); 
+        // } 
+
+
+        // const input = document.getElementById("myInput");
+        // const inputValue = input.value;
+
+    </script>
+
+</head>
+<body>
+    <h1>Calculate the answer and check your answer</h1>
+    <!-- <button id="b" onclick="random();">get your numbers</button> -->
+
+    <p>
+        Value1:
+        <input type="text" class="number" id="Value1" value="6">
+    </p>
+
+    <p>
+        Value2:
+        <input type="text" class="number" id="Value2" value="2">
+    </p>
+
+    <p>
+        Result:
+        <input type="text" id="answer" value="">
+    </p>
+
+    <input type="button"
+            value="+"
+            onclick="DoAdd()"/>
+    <input type="button"
+            value="-"
+            onclick="DoSub()"/>  
+    <input type="button"
+            value="*"
+            onclick="DoMul()"/>  
+    <input type="button"
+            value="/"
+            onclick="DoDiv()"/>  
+    <input type="button"
+            value="Check"
+            onclick="DoCheck()"/>   
+
+</body>
+</html>

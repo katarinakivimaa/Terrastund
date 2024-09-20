@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeoutfadein</title>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+        
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown(4000);
+            });
+            $("#block").click(function(){
+                $("div").animate({
+                    left:'150px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+            });
+            $("#hide").click(function(){
+                    $("#block").hide("slow", function(){
+                    alert("The block is now hidden!")
+                    });
+                    $("#panel").hide("slow", function(){
+                    
+                    });
+                });
+        });
+     
+        
+
+    </script>
+
+    <style>
+        #panel, #block {
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+            font-size: 18px;
+            text-align: center;
+            background-color: rgb(0, 41, 117);
+            color: white;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="flip">Slide!</button>
+    <button id="hide">Hide!</button>
+    
+    <div style="position: absolute;" id="block">click to enlarge and move</div>
+    
+    <div id="panel">hello!!</div>
+
+</body>
+</html>

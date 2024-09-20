@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeoutfadein</title>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("#a").fadeOut(1000);
+                $("#b").fadeIn(1000);
+
+            });
+            $(".btn2").click(function(){
+                $("#a").fadeIn(1000);
+                $("#b").fadeOut(1000);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button class="btn1">Fade In</button>
+    <button class="btn2">Fade Out</button>
+
+    <p id="a">This is paragraph a</p>
+    <p id="b">This is paragraph b</p>
+</body>
+</html>
