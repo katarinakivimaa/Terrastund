@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>katakivi</title>
+    <script>
+    window.onload = 
+    choosePic;
+
+    var myPix = new Array("images/lion.jpg","images/tiger.jpg","images/bear.jpg");
+
+    function choosePic() {
+        randomNum = Math.floor((Math.random()*myPix.length));
+        document.getElementById("myPicture").src = myPix[randomNum];      
+    }
+    </script>
+
+</head>
+<body>
+    <p><img src="images/tiger.jpg" alt="" width="305" height="312" id="myPicture"></p>
+
+</body>
+</html>
