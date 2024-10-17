@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+
+    <title>ulesanne</title>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
+
+    <style>
+        .Transition {
+            margin: 5px;
+            font-family: sans-serif;
+        }
+
+        .Normal {
+            background-color: #7fffff;
+            color: black;
+            border: groove;
+            border-width: 5px;
+            padding: 3px;
+            height: 50px;
+            width: 400px;
+        }
+    </style>
+
+    <script language="JavaScript">
+
+        $(function () {
+
+            var Hidden = false;
+
+            $("#Effect").click(
+                function () {
+                    $("#SampleText").effect(
+                        "bounce", "easeOutBounce", 1500);
+                });
+
+            $("#Show").click(
+                function () {
+                    Hidden = false;
+
+                    $("#SampleText").show("slide", 1500, ChangeButtonState);
+                });
+
+            $("#Hide").click(
+                function () {
+                    Hidden = true;
+
+
+                    $("#SampleText").hide(
+                        "explode", 1500, ChangeButtonState);
+                });
+            $("#Toggle").click(
+                function () {
+                    Hidden = !Hidden;
+                    $("#SampleText").toggle(
+                        "scale", { percent: 0 }, 1500,
+                        ChangeButtonState);
+                });
+            function ChangeButtonState() {
+                if (Hidden) {
+                    $("#Show").attr("Hidden", false);
+                    $("#Hide").attr("Hidden", true);
+                }
+                else {
+                    $("#Show").attr("Hidden", true);
+                    $("#Hide").attr("Hidden", false);
+                }
+            }
+        }
+        )
+
+    </script>
+</head>
+
+<body>
+    <h1>Working with Element Visibility</h1>
+    <div class="Transition">
+        <div id="SampleText" class="Normal">
+            This is some text to transition.
+        </div>
+    </div>
+    <input type="button" id="Effect" value="Use an effect" />
+    <input type="button" id="Show" hidden="true" value="show a hidden element" />
+    <input type="button" id="Toggle" value="hide an element" />
+
+</body>
+
+</html>

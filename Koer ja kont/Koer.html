@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var score=0, lives=3, dogX=6, dogY=10, boneX=8, boneY=0;
+function setLeft(id,x){document.getElementById(id).style.left=x+"px";}
+function setTop(id,y){document.getElementById(id).style.top=y+"px";}
+function randomNumber(low,high){return(Math.floor(low+Math.random()*(1+high-low)));}
+var gameTimer=window.setInterval(moveBone,200);
+document.onkeydown=handleKeys;
+function handleKeys(e){
+if(e.keyCode==37){dogX--;}
+if(e.keyCode==39){dogX++;}
+setLeft("dog",dogX*50);
+setTop("dog",dogY*50);
+}
+function moveBone(){
+boneY=boneY+=1;
+setLeft("bone",boneX*50);
+setTop("bone",boneY*50);
+if(boneY>dogY+5){missedBone();}
+if((dogX==boneX)&&(dogY==boneY)){caughtBone();}
+}
+
+function missedBone(){
+	boneY=0;
+	boneX=randomNumber(2,16);
+	lives--;
+	document.getElementById("livesTB").innerText="Lives: "+lives;
+	if(lives==0){gameOver();}
+}
+function caughtBone(){
+	boneY=0;
+	boneX=randomNumber(2,16);
+	score++;
+	document.getElementById("scoreTB").innerText="Score: "+score;
+}
+function gameOver(){
+	alert("Game Over! You scored: "+score);
+	location.reload();
+}
+
+</script>
+</head>
+
+<body>
+<body style="background: -webkit-linear-gradient(blue, green);">
+<img id="dog" style="position:absolute; width:50px; top:500px; left:300px; -webkit-transition: all 0.2s;" src="dog.png">
+<img id="bone" style="position:absolute; width:50px; top: 0px; left: 0px; -webkit-transition: all 0.2s;" src="bone.png">
+<p id="scoreTB" style="position:absolute; left:50px; color:yellow; font-size:28px; font-family:Arial;">Score: 0</p>
+<p id="livesTB" style="position:absolute; right:50px; color:yellow; font-size:28px; font-family:Arial;">Lives: 3</p>
+</body>
+
+</html>

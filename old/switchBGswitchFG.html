@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+    <title>ulesanne katarina kivimaa</title>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
+    <style>
+        .Transition {
+            margin: 5px;
+            font-family: sans-serif;
+        }
+
+        .Normal {
+            background-color: #7fffff;
+            color: black;
+            border: groove;
+            border-width: 5px;
+            padding: 3px;
+            height: 50px;
+            width: 400px;
+        }
+
+        .foreground {
+            position: absolute;
+        }
+
+        .foreground img {
+            width: 200px;
+            height: auto;
+        }
+
+        .background img {
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+
+    <script language="JavaScript">
+
+        $(function () {
+
+            var Hidden = false;
+
+
+            $("#Show").click(
+                function () {
+                    Hidden = false;
+                    $("#Image").show("slide", 1500, ChangeButtonState);
+                });
+
+            $("#Hide").click(
+                function () {
+                    Hidden = true;
+                    $("#Image").hide(
+                        "explode", 1500, ChangeButtonState);
+                });
+
+            $("#Toggle").click(
+                function () {
+                    Hidden = !Hidden;
+                    $("#Image").toggle(
+                        "scale", { percent: 0 }, 1500,
+                        ChangeButtonState);
+                });
+
+            $("#Toggle1").click(
+                function () {
+                    Hidden = !Hidden;
+                    $("#Image1").toggle(
+                        "slide", { percent: 0 }, 1500,
+                        ChangeButtonState);
+                });
+
+            $("#Toggle2").click(
+                function () {
+                    Hidden = !Hidden;
+                    $("#Image2").toggle(
+                        "slide", { percent: 0 }, 1500,
+                        ChangeButtonState);
+                });
+
+            $("#Toggle3").click(
+                function () {
+                    Hidden = !Hidden;
+                    $("#Image3").toggle(
+                        "explode", 1500,
+                        ChangeButtonState);
+                });
+
+            function ChangeButtonState() {
+                if (Hidden) {
+                    $("#Show").attr("Hidden", false);
+                    $("#Hide").attr("Hidden", true);
+                }
+                else {
+                    $("#Show").attr("Hidden", true);
+                    $("#Hide").attr("Hidden", false);
+                }
+            }
+        }
+        )
+
+    </script>
+</head>
+
+<body>
+    <h1>ülesanne 14:55 10.10.2024 </h1>
+    <input type="button" id="Toggle" value="music notes" />
+    <input type="button" id="Toggle1" value="penguin" />
+    <!-- <input type="button" id="Show" Kat hidden="true" value="show a hidden element" /> -->
+    <input type="button" id="Toggle2" value="Kontserdimaja" />
+    <input type="button" id="Toggle3" value="Peninsula" />
+
+    <div class="foreground">
+        <img id="Image" src="music-notes.png" alt="">
+        <img id="Image1" hidden="false" src="penguin.gif" alt="">
+    </div>
+    <div class="background">
+        <img id="Image2" class="one" src="Kontserdimaja.jpg" alt="">
+        <img id="Image3" hidden="false" class="one" src="Peninsula.webp" alt="">
+    </div>
+
+
+</body>
+
+</html>

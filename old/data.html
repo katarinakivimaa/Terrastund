@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>katakivi</title>
+
+    <style>
+        div {padding:5px}
+        :valid {box-shadow: 0 0 5px green}
+        :-moz-submit-invalid {box-shadow: 0 0 px red}
+    </style>
+
+    <script>
+        function ValidatePassword(P1,P2){
+            if(P1.value != P2.value ||
+                P1.value == "" ||
+                P2.value == ""
+            )
+            P2.setCustomValidity(
+                "The password is incorrect"
+            );
+            else {
+                P2.setCustomValidity("");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h2>validating data</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <div>
+                <label>Name:</label>
+                <input id="Name" type="text" placeholder="your name" maxlength="100" required x-moz-errormessage="your name"/>
+            </div>
+            <div>
+                <label>Phone Nr</label>
+                <input id="Telephone" type="tel" placeholder="your number" pattern="\d\d\d\ \d\d\d \d\d\d\d" required x-moz-errormessage="your number"/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input id="P1" type="password" placeholder="Password"/>
+            </div>
+            <div>
+                <label>Confirm Password:</label>
+                <input id="P2" type="password" placeholder="password" onfocus="ValidatePassword(document.getElementById('P1'), this);"
+                onfocus="ValidatePassword(document.getElementById('P1'), this);" />
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div>
+                <input type="submit" value="submit Data" id="submit">
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>
