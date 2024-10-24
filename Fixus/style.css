@@ -1,0 +1,23 @@
+.active {
+	color: navy;
+
+}
+
+
+.mai li::after { 
+	content: " / ";
+	
+  }
+
+.come-on {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-default {
+	height: 100%;
+}
+
+.carousel {
+	
+}

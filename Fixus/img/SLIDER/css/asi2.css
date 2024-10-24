@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    }
+body {
+    font-family: 'Barlow', sans-serif;
+    }
+        
+
+
+.partners {
+    margin-top: 100px;
+    height: 300px;
+    width: auto;
+    
+}
+.partners img {
+    width: 100px;
+    max-width: 100px;
+    height: auto;
+    vertical-align: center;
+    text-align: center;
+    justify-items: baseline;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    img {
+      width: 100%;
+    }
+  }
+@media (max-width: 767px){
+   .btn {
+
+    width: 50%;
+
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .fixed-bottom.ask-offer {
+        width: 100%;
+        
+}
+}
+
+
+@media(max-width: 767px){
+    .footer {
+        height: 900px;
+        width: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
