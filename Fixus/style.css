@@ -4,10 +4,10 @@
 }
 
 
-.mai li::after { 
+/* .mai li::after { 
 	content: " / ";
 	
-  }
+  } */
 
 .come-on {
 	display: flex;
@@ -18,6 +18,45 @@
 	height: 100%;
 }
 
-.carousel {
-	
+
+.mx-auto {
+	margin-right: auto !important;
+	margin-left: auto !important;
+   }
+
+
+   /*for Demo Only*/
+.demo-row {
+	background-color: #f5efed;
+	padding: 50px 0;
+  }
+
+.hihi {
+	background-color: #fff;
 }
+
+.hihi > .carousel-indicators {
+	z-index: 3;
+}
+  
+  
+  /*Implement*/
+  .sponsor-feature {
+	  padding: 20px;
+	  border-radius: 5px;
+	  min-height: 150px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  margin: 5px 0;
+  }
+  
+  #id-sponsors .carousel {
+	  margin-bottom: 20px;
+  }
+  #id-sponsors .item {
+	  padding-bottom: 20px;
+  }
+  #id-sponsors .carousel-indicators {
+	  bottom: -25px;
+  }
